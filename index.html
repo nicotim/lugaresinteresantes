@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Lugares Interesantes</title>
+</head>
+
+<body>
+    <div id="grid">
+        <section id="nav">
+            <div class="navegacion">
+                <a href="#europa" class="buttonHeader">
+                    <span class="button__text">Europa</span>
+                </a>
+                <a href="#america" class="buttonHeader">
+                    <span class="button__text">America</span>
+                </a>
+                <a href="#asia" class="buttonHeader">
+                    <span class="button__text">Asia
+                        </span>
+                </a>
+                <a href="#africa" class="buttonHeader">
+                    <span class="button__text">Africa</span>
+                </a>
+                <a href="#oceania" class="buttonHeader">
+                    <span class="button__text">Oceania</span>
+                </a>
+                <a href="#contactos" class="buttonHeader">
+                    <span class="button__text">Contactos</span>
+                </a>
+            </div>
+        </section>
+        <section id="header">
+            <div class="header">
+                <div class="header__text">
+                    <h1 class="header__title">Lugares Interesantes</h1>
+                    <h3>Un asomo a algunos de los lugares mas interesantes del planeta</h3>
+                </div>
+            </div>
+        </section>
+        <section id="europa">
+            <div class="contenedor">
+                <div class="card">
+                    <img src="imagenes/europa2.jpg" alt="Lugar de la imagen" class="card__img">
+
+                    <div class="card__text">
+                        <h2 class="card__title">Europa</h2>
+                        <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
+
+                        <a href="europa.html" class="button">
+                            <span class="button__text">Ver mas	→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="america">
+            <div class="contenedor">
+                <div class="card">
+                    <img src="imagenes/america2.jpg" alt="Lugar de la imagen" class="card__img">
+
+                    <div class="card__text">
+                        <h2 class="card__title">America</h2>
+                        <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
+
+                        <a href="america.html" class="button">
+                            <span class="button__text">Ver mas	→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="asia">
+            <div class="contenedor">
+                <div class="card">
+                    <img src="imagenes/asia2.jpg" alt="Lugar de la imagen" class="card__img">
+
+                    <div class="card__text">
+                        <h2 class="card__title">Asia</h2>
+                        <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
+
+                        <a href="asia.html" class="button">
+                            <span class="button__text">Ver mas	→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="africa">
+            <div class="contenedor">
+                <div class="card">
+                    <img src="imagenes/africa2.jpg" alt="Lugar de la imagen" class="card__img">
+
+                    <div class="card__text">
+                        <h2 class="card__title">Africa</h2>
+                        <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
+
+                        <a href="africa.html" class="button">
+                            <span class="button__text">Ver mas	→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="oceania">
+            <div class="contenedor">
+                <div class="card">
+                    <img src="imagenes/oceania2.jpg" alt="Lugar de la imagen" class="card__img">
+
+                    <div class="card__text">
+                        <h2 class="card__title">Oceania</h2>
+                        <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
+
+                        <a href="oceania.html" class="button">
+                            <span class="button__text">Ver mas	→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contactos">
+            <div class="contacts">
+                <div class="contacts__text">
+                    <h1 class="contacts__title">Contacto</h1>
+                    <h2>Si conoces algun otro lugar interesante contanos!</h2>
+                </div>
+                <div class="contacts__text">
+                    <form action="enviar.php" method="POST" enctype="text/plain">
+                        <fieldset>
+                            <h2 class="contacts__title">Datos</h2>
+                            <label for="nombreyapellido">Nombre y Apellido:</label><br>
+                            <input type="text" name="nombreyapellido" maxlength="80" value="">
+                            <br>
+                            <label for="mail">Mail:</label><br>
+                            <input type="email" name="mail" maxlength="120">
+                            <br>
+                            <h4>Selecciona el continente al que pertecene el lugar del que nos queres contar:</h4>
+                            <select name="continentes" id="">
+                                <option value="">Europa</option>
+                                <option value="">America</option>
+                                <option value="">Asia</option>
+                                <option value="">Africa</option>
+                                <option value="">Oceania</option></select>
+
+                            <h4>Contanos sobre otros lugares que conozcas o te gustaria conocer!</h4>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <br>
+                            <input type="submit" name="submit" value="Enviar">
+                            <input type="reset" name="reset" value="Limpiar">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer id="border" class="border">
+            <h1>Referencias!</h1>
+            <a href="#">Link1</a>
+            <a href="#">Link2</a>
+            <a href="#">Link3</a>
+            <a href="#">Link4</a>
+        </footer>
+    </div>
+</body>
+
+</html>
