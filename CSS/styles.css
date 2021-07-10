@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: linear-gradient(to left, #3C9FF0, #3CF07B);
+    background-color: #3EFAB5;
 }
 
 
@@ -93,7 +93,7 @@ body {
     width: fit-content;
     margin: 3em;
     border-radius: 15px;
-    background-image: linear-gradient(to left, #f2f2f2, #3EFAB5);
+    background-image: linear-gradient(to left, hsl(0, 100%, 100%), #3EFAB5);
     display: flex;
 }
 
@@ -114,7 +114,7 @@ body {
     margin: 15px;
     border-radius: 10px;
     overflow: hidden;
-    display: inline-block;
+    display: flex;
 }
 
 
@@ -192,10 +192,14 @@ form {
     margin: 2em;
     padding: 1em;
     border-radius: 15px;
-    background-image: linear-gradient(to left, #2268F2, #3EFAB5);
+    background-image: linear-gradient(to left, #f2f2f2, #3EFAB5);
     justify-content: center;
     flex-direction: column;
     max-width: max-content;
+}
+
+fieldset {
+    border: 0;
 }
 
 
