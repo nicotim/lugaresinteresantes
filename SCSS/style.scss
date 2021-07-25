@@ -1,0 +1,271 @@
+@import "extenciones";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.border {
+    border: 1px solid black;
+    display: flex;
+    margin-top: $standard-pixels * 2;
+    @extend %display;
+}
+
+body {
+    background-color: lighten(#3EFAB5, 20%);
+}
+
+
+/* Navegacion */
+
+.navegacion {
+    flex-flow: row wrap;
+    @extend %display-content;
+}
+
+.navegacion>div {
+    margin-bottom: $standard-pixels * 2;
+    @extend %border;
+}
+
+.buttonHeader {
+    @extend %button;
+}
+
+
+/* Header */
+
+.header {
+    flex-wrap: wrap;
+    @extend %display-content;
+}
+
+.header>div {
+    @extend %border;
+}
+
+.header__text {
+    font-size: $standard-em;
+    @extend %font-style;
+    @extend %text;
+}
+
+.header__title {
+    font-size: $standard-em * 2;
+    font-weight: bold;
+}
+
+
+/*Style de las cajas de Continentes */
+
+.contenedor {
+    flex-wrap: wrap;
+    @extend %display-content;
+}
+
+.contenedor>div {
+    width: fit-content;
+    margin: $standard-em * 3;
+    background-image: linear-gradient(to left, hsl(0, 100%, 100%), #3EFAB5);
+    @extend %display;
+    @extend %border-radius;
+}
+
+.card {
+    height: auto;
+    padding: $standard-em;
+    position: relative;
+    @extend %border-radius;
+    @extend %display;
+}
+
+.card__img {
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+    @extend %display;
+    @extend %border-radius;
+    @extend %margin;
+}
+
+.card__text {
+    text-align: center;
+    font-size: $standard-em;
+    @extend %font-style;
+    @extend %margin;
+}
+
+.card__title {
+    font-size: $standard-em *2;
+    font-weight: bold;
+    @extend %margin;
+}
+
+.card__pharagraph {
+    line-height: $standard-pixels * 2.5;
+    margin-bottom: $standard-pixels * 1.5;
+    font-size: $standard-em * 1.2;
+    font-weight: normal;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    @extend %button;
+}
+
+.button__text {
+    font-weight: 600;
+    font-size: $standard-em;
+}
+
+
+/* Contacts */
+
+#contactos {
+    width: $standard-width * 0.5;
+    margin: auto;
+    text-align: center;
+}
+
+form {
+    width: fit-content;
+    margin: auto;
+    flex-wrap: wrap;
+    margin: $standard-em * 2;
+    padding: $standard-em;
+    border-radius: $standard-em;
+    background-image: linear-gradient(to left, #f2f2f2, #3EFAB5);
+    flex-direction: column;
+    max-width: max-content;
+    @extend %display-content;
+}
+
+fieldset {
+    border: 0;
+}
+
+
+/*Propiedades del input "Nombre y apellido" */
+
+input[type=text] {
+    width: $standard-width * 0.4;
+    padding: 5px 10px;
+    margin: $standard-pixels;
+    box-sizing: border-box;
+    border-radius: $standard-pixels;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+
+/*Propiedades del input "Email" */
+
+input[type=email] {
+    width: $standard-width * 0.4;
+    padding: 5px 10px;
+    margin: $standard-pixels;
+    box-sizing: border-box;
+    border-radius: $standard-pixels;
+}
+
+input[type=email]:focus {
+    background-color: lightblue;
+}
+
+
+/* Propiedades de la seleccion de continente */
+
+select {
+    min-width: $standard-pixels * 10;
+    width: $standard-width * 0.2;
+    padding: 12px 14px;
+    margin: $standard-pixels;
+    border: none;
+    border-radius: $standard-pixels * 0.4;
+    background-color: #f1f1f1;
+}
+
+
+/* Propiedades del input sobre lugares interesantes */
+
+textarea {
+    width: $standard-width * 0.6;
+    height: $standard-pixels * 15;
+    margin: $standard-pixels;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: $standard-pixels * 0.4;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+
+/* Propiedades de los botones de "Enviar y Limpiar" */
+
+input[type=submit],
+input[type=reset] {
+    min-width: $standard-pixels * 8;
+    width: $standard-width * 0.2;
+    margin: $standard-pixels;
+    background-color: $celeste;
+    border: none;
+    color: white;
+    padding: $standard-em;
+    text-decoration: none;
+    border-radius: $standard-pixels * 2;
+    cursor: pointer;
+}
+
+
+/* Media query */
+
+@media screen and (max-width: 575.98px) {
+    .contenedor>div {
+        flex-direction: column;
+        width: fit-content;
+        margin: $standard-em;
+        padding: initial;
+    }
+    .navegacion {
+        flex-direction: column;
+    }
+    .card__img {
+        max-width: $standard-width * 30;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(min-width:575.99px) and (max-width: 949.98px) {
+    .contenedor>div {
+        flex-direction: column;
+        width: fit-content;
+        margin: $standard-em*2;
+        padding: initial;
+    }
+    .navegacion {
+        flex-direction: column;
+    }
+    .card__img {
+        max-width: $standard-pixels * 36;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 949.99px) {
+    .contenedor>div {
+        width: fit-content;
+        margin-top: $standard-pixels;
+    }
+    .card__img {
+        min-width: $standard-pixels*30;
+    }
+}
