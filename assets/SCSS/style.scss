@@ -13,24 +13,33 @@
 }
 
 body {
-    background-color: lighten(#3EFAB5, 20%);
+    background-color: #D0F9CC;
+}
+
+.jumbotron {
+    background-color: darken(#CCF7F9, 10%);
+    padding: 1em;
 }
 
 
 /* Navegacion */
 
-.navegacion {
-    flex-flow: row wrap;
+.nav-container {
+    text-align: center;
     @extend %display-content;
 }
 
-.navegacion>div {
-    margin-bottom: $standard-pixels * 2;
-    @extend %border;
+.navegacion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .buttonHeader {
+    font-size: $standard-em * 1.2;
     @extend %button;
+    @extend %font-style;
 }
 
 
@@ -42,18 +51,24 @@ body {
 }
 
 .header>div {
-    @extend %border;
+    margin-left: 2%;
+    border-radius: 1em;
+    padding: 1em;
+    position: relative;
 }
 
 .header__text {
-    font-size: $standard-em;
+    font-size: $standard-em * 1.5;
+    font-weight: bold;
+    margin-top: 4%;
     @extend %font-style;
     @extend %text;
 }
 
-.header__title {
-    font-size: $standard-em * 2;
-    font-weight: bold;
+.logo {
+    width: 20%;
+    height: 35vh;
+    overflow: hidden;
 }
 
 
@@ -65,8 +80,9 @@ body {
 }
 
 .contenedor>div {
-    width: fit-content;
-    margin: $standard-em * 3;
+    width: 80%;
+    height: 50vh;
+    margin: 2%;
     background-image: linear-gradient(to left, hsl(0, 100%, 100%), #3EFAB5);
     @extend %display;
     @extend %border-radius;
@@ -81,8 +97,8 @@ body {
 }
 
 .card__img {
-    width: fit-content;
-    height: auto;
+    width: 20%;
+    height: 40vh;
     overflow: hidden;
     @extend %display;
     @extend %border-radius;
@@ -103,8 +119,8 @@ body {
 }
 
 .card__pharagraph {
-    line-height: $standard-pixels * 2.5;
-    margin-bottom: $standard-pixels * 1.5;
+    line-height: 5vh;
+    margin-bottom: 5%;
     font-size: $standard-em * 1.2;
     font-weight: normal;
 }
@@ -222,6 +238,48 @@ input[type=reset] {
 }
 
 
+/* Footer */
+
+.footer-container {
+    background-color: lighten($negro, 20%);
+    padding: 3em 0 3em 0;
+}
+
+.footer {
+    width: 80%;
+    height: 35vh;
+    background-color: lighten($negro, 20%);
+    color: $blanco;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-right: $standard-em * 3;
+}
+
+.footer-heading h2 {
+    margin-bottom: 2em;
+    color: $celeste;
+}
+
+.footer-heading a {
+    font-size: $standard-em * 1.2;
+    color: $blanco;
+    text-decoration: underline;
+    margin-bottom: $standard-em * 0.5;
+    &:hover {
+        color: $celeste;
+        transition: 0.4;
+    }
+    @extend %font-style;
+}
+
+
 /* Media query */
 
 @media screen and (max-width: 575.98px) {
@@ -240,23 +298,31 @@ input[type=reset] {
         margin-left: auto;
         margin-right: auto;
     }
+    .footer-3 {
+        height: 50vh;
+        display: none;
+    }
 }
 
 @media(min-width:575.99px) and (max-width: 949.98px) {
     .contenedor>div {
         flex-direction: column;
         width: fit-content;
-        margin: $standard-em*2;
-        padding: initial;
+        margin: 5%;
+        padding: 3em;
     }
     .navegacion {
         flex-direction: column;
     }
     .card__img {
-        max-width: $standard-pixels * 36;
+        min-width: $standard-pixels * 15;
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    .footer {
+        height: 35vh;
+        flex-direction: column;
     }
 }
 

@@ -1,16 +1,9 @@
 /* Operadores */
 /* Colores */
 /* Extenciones */
-form, .contenedor, .header, .navegacion {
+form, .contenedor, .header, .nav-container {
   display: flex;
   justify-content: center;
-}
-
-.header > div, .navegacion > div {
-  margin-left: 5%;
-  border-radius: 15px;
-  padding: 1em;
-  position: relative;
 }
 
 .header__text {
@@ -26,7 +19,7 @@ form, .contenedor, .header, .navegacion {
 }
 
 .card__title, .card__text, .card__img {
-  margin: 1em;
+  margin: 1%;
 }
 
 .button, .buttonHeader {
@@ -42,7 +35,7 @@ form, .contenedor, .header, .navegacion {
   background-color: #2394FC;
 }
 
-.card__text, .header__text {
+.footer-heading a, .card__text, .header__text, .buttonHeader {
   font-style: italic;
 }
 
@@ -59,16 +52,28 @@ form, .contenedor, .header, .navegacion {
 }
 
 body {
-  background-color: #a1fddb;
+  background-color: #D0F9CC;
+}
+
+.jumbotron {
+  background-color: #9ef0f4;
+  padding: 1em;
 }
 
 /* Navegacion */
-.navegacion {
-  flex-flow: row wrap;
+.nav-container {
+  text-align: center;
 }
 
-.navegacion > div {
-  margin-bottom: 20px;
+.navegacion {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.buttonHeader {
+  font-size: 1.2em;
 }
 
 /* Header */
@@ -76,13 +81,23 @@ body {
   flex-wrap: wrap;
 }
 
-.header__text {
-  font-size: 1em;
+.header > div {
+  margin-left: 2%;
+  border-radius: 1em;
+  padding: 1em;
+  position: relative;
 }
 
-.header__title {
-  font-size: 2em;
+.header__text {
+  font-size: 1.5em;
   font-weight: bold;
+  margin-top: 4%;
+}
+
+.logo {
+  width: 20%;
+  height: 35vh;
+  overflow: hidden;
 }
 
 /*Style de las cajas de Continentes */
@@ -91,8 +106,9 @@ body {
 }
 
 .contenedor > div {
-  width: fit-content;
-  margin: 3em;
+  width: 80%;
+  height: 50vh;
+  margin: 2%;
   background-image: linear-gradient(to left, white, #3EFAB5);
 }
 
@@ -103,8 +119,8 @@ body {
 }
 
 .card__img {
-  width: fit-content;
-  height: auto;
+  width: 20%;
+  height: 40vh;
   overflow: hidden;
 }
 
@@ -119,8 +135,8 @@ body {
 }
 
 .card__pharagraph {
-  line-height: 25px;
-  margin-bottom: 15px;
+  line-height: 5vh;
+  margin-bottom: 5%;
   font-size: 1.2em;
   font-weight: normal;
 }
@@ -223,6 +239,45 @@ input[type=reset] {
   cursor: pointer;
 }
 
+/* Footer */
+.footer-container {
+  background-color: #333333;
+  padding: 3em 0 3em 0;
+}
+
+.footer {
+  width: 80%;
+  height: 35vh;
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3em;
+}
+
+.footer-heading h2 {
+  margin-bottom: 2em;
+  color: #2394FC;
+}
+
+.footer-heading a {
+  font-size: 1.2em;
+  color: white;
+  text-decoration: underline;
+  margin-bottom: 0.5em;
+}
+.footer-heading a:hover {
+  color: #2394FC;
+  transition: 0.4;
+}
+
 /* Media query */
 @media screen and (max-width: 575.98px) {
   .contenedor > div {
@@ -242,13 +297,18 @@ input[type=reset] {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .footer-3 {
+    height: 50vh;
+    display: none;
+  }
 }
 @media (min-width: 575.99px) and (max-width: 949.98px) {
   .contenedor > div {
     flex-direction: column;
     width: fit-content;
-    margin: 2em;
-    padding: initial;
+    margin: 5%;
+    padding: 3em;
   }
 
   .navegacion {
@@ -256,10 +316,15 @@ input[type=reset] {
   }
 
   .card__img {
-    max-width: 360px;
+    min-width: 150px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .footer {
+    height: 35vh;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 949.99px) {
