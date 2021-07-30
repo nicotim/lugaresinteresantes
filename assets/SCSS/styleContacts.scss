@@ -1,0 +1,88 @@
+@import "extenciones";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    @extend %font-style;
+}
+
+body {
+    background-color: #D0F9CC;
+}
+
+.jumbotron {
+    padding: 1em;
+    position: relative;
+}
+
+.nav-container {
+    text-align: center;
+    @extend %display-content;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.buttonHeader {
+    font-size: $standard-em * 1.2;
+    @extend %button;
+    @extend %font-style;
+}
+
+.contacts-text {
+    @extend %text;
+}
+
+.wrapper {
+    position: absolute;
+    top: 62%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: #3EFAB5;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px #3EFAB5;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    width: $width;
+    @extend %contacts-data;
+}
+
+.msg {
+    width: $width;
+    @extend %contacts-data;
+}
+
+.input {
+    @extend %contacts-data;
+}
+
+textarea {
+    height: 300px;
+    @extend %contacts-data;
+}
+
+.btn {
+    background: #3EFAB5;
+    text-align: center;
+    padding: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}

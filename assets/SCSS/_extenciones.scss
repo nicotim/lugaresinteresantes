@@ -56,3 +56,14 @@ $celeste: #2394FC;
 %font-style {
     font-style: italic;
 }
+
+$width: 50%;
+%contacts-data {
+    margin: 15px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid $blanco;
+    padding: 15px;
+    color: $negro;
+    width: 100%;
+}

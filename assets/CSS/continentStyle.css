@@ -1,7 +1,7 @@
 /* Operadores */
 /* Colores */
 /* Extenciones */
-.contenedor, .header {
+.contenedor, .header, .nav-container {
   display: flex;
   justify-content: center;
 }
@@ -22,7 +22,7 @@
   margin: 1%;
 }
 
-.button {
+.button, .buttonHeader {
   font-size: 1em;
   border-radius: 12px;
   padding: 10px 24px;
@@ -31,11 +31,11 @@
   transition-duration: 0.4s;
   border: 2px solid #2394FC;
 }
-.button:hover {
+.button:hover, .buttonHeader:hover {
   background-color: #2394FC;
 }
 
-.footer-heading a, .card__text, * {
+.footer-heading a, .card__text, .header__text, .buttonHeader {
   font-style: italic;
 }
 
@@ -53,6 +53,26 @@
 
 body {
   background-color: #D0F9CC;
+}
+
+.jumbotron {
+  padding: 1em;
+}
+
+/* Navegacion */
+.nav-container {
+  text-align: center;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.buttonHeader {
+  font-size: 1.2em;
 }
 
 /* Header */
@@ -229,4 +249,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=continentStyle.css.map */

@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @extend %font-style;
 }
 
 .border {
@@ -15,6 +14,31 @@
 
 body {
     background-color: #D0F9CC;
+}
+
+.jumbotron {
+    padding: 1em;
+}
+
+
+/* Navegacion */
+
+.nav-container {
+    text-align: center;
+    @extend %display-content;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.buttonHeader {
+    font-size: $standard-em * 1.2;
+    @extend %button;
+    @extend %font-style;
 }
 
 
@@ -36,6 +60,7 @@ body {
     font-size: $standard-em * 1.5;
     font-weight: bold;
     margin-top: 4%;
+    @extend %font-style;
     @extend %text;
 }
 

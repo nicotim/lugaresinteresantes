@@ -6,45 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/CSS/style.css">
-    <link rel="stylesheet" href="/assets/CSS/animate.css">
 
     <title>Lugares Interesantes</title>
 </head>
 
 <body>
-    <div class="jumbotron">
-        <div class="nav-container">
-            <div class="navegacion">
-                <a href="/views/europa.html" class="buttonHeader">
-                    <span class="button__text">Europa</span>
-                </a>
-                <a href="/views/america.html" class="buttonHeader">
-                    <span class="button__text">America</span>
-                </a>
-                <a href="/views/asia.html" class="buttonHeader">
-                    <span class="button__text">Asia
-                            </span>
-                </a>
-                <a href="/views/africa.html" class="buttonHeader">
-                    <span class="button__text">Africa</span>
-                </a>
-                <a href="/views/oceania.html" class="buttonHeader">
-                    <span class="button__text">Oceania</span>
-                </a>
-            </div>
+
+    <div class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo">
         </div>
-
-        <section id="header">
-            <div class="header">
-                <div class="logo">
-                    <img src="img/logo.png" alt="logo">
-                </div>
-                <div class="header__text">
-                    <h1 class="header__title">Lugares Interesantes</h1>
-                    <h3>Un asomo a algunos de los lugares mas interesantes del planeta</h3>
-                </div>
-            </div>
-
+        <div class="header__text">
+            <h1 class="header__title">Lugares Interesantes</h1>
+            <h3>Un asomo a algunos de los lugares mas interesantes del planeta</h3>
+        </div>
     </div>
     <section id="europa">
         <div class="contenedor">
@@ -54,7 +29,7 @@
                     <h2 class="card__title">Europa</h2>
                     <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
 
-                    <a href="europa.html" class="button">
+                    <a href="/views/europa.html" class="button">
                         <span class="button__text">Ver mas	→</span>
                     </a>
                 </div>
@@ -69,7 +44,7 @@
                     <h2 class="card__title">America</h2>
                     <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
 
-                    <a href="america.html" class="button">
+                    <a href="/views/america.html" class="button">
                         <span class="button__text">Ver mas	→</span>
                     </a>
                 </div>
@@ -84,7 +59,7 @@
                     <h2 class="card__title">Asia</h2>
                     <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
 
-                    <a href="asia.html" class="button">
+                    <a href="/views/asia.html" class="button">
                         <span class="button__text">Ver mas	→</span>
                     </a>
                 </div>
@@ -99,7 +74,7 @@
                     <h2 class="card__title">Africa</h2>
                     <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
 
-                    <a href="africa.html" class="button">
+                    <a href="/views/africa.html" class="button">
                         <span class="button__text">Ver mas	→</span>
                     </a>
                 </div>
@@ -114,44 +89,10 @@
                     <h2 class="card__title">Oceania</h2>
                     <p class="card__pharagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum id exercitationem sint velit alias dolore quasi, quam perferendis, adipisci rem tempora dolor quo. Repudiandae cumque eum provident inventore? Est, nobis.</p>
 
-                    <a href="oceania.html" class="button">
+                    <a href="/views/oceania.html" class="button">
                         <span class="button__text">Ver mas	→</span>
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="contactos">
-        <div class="contacts">
-            <div class="contacts__text">
-                <h1 class="contacts__title wow animate__bounceIn">Contacto</h1>
-                <h2>Si conoces algun otro lugar interesante contanos!</h2>
-            </div>
-            <div class="contacts__text">
-                <form action="enviar.php" method="POST" enctype="text/plain">
-                    <fieldset>
-                        <h2 class="contacts__title">Datos</h2>
-                        <label for="nombreyapellido">Nombre y Apellido:</label><br>
-                        <input type="text" name="nombreyapellido" maxlength="80" value="">
-                        <br>
-                        <label for="mail">Mail:</label><br>
-                        <input type="email" name="mail" maxlength="120">
-                        <br>
-                        <h4>Selecciona el continente al que pertecene el lugar del que nos queres contar:</h4>
-                        <select name="continentes" id="">
-                                <option value="">Europa</option>
-                                <option value="">America</option>
-                                <option value="">Asia</option>
-                                <option value="">Africa</option>
-                                <option value="">Oceania</option></select>
-
-                        <h4>Contanos sobre otros lugares que conozcas o te gustaria conocer!</h4>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <br>
-                        <input type="submit" name="submit" value="Enviar">
-                        <input type="reset" name="reset" value="Limpiar">
-                    </fieldset>
-                </form>
             </div>
         </div>
     </section>
@@ -160,14 +101,14 @@
             <div class="footer-heading footer-1">
                 <h2>About Us</h2>
                 <a href="#">Blog</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+                <a href="#">Politica de privacidad</a>
+                <a href="#">Terminos de soporte</a>
             </div>
             <div class="footer-heading footer-2">
-                <h2>Contact Us</h2>
-                <a href="#">Support</a>
-                <a href="#">Sponsorships</a>
-                <a href="#">Contact</a>
+                <h2>Contacto</h2>
+                <a href="#">Soporte</a>
+                <a href="#">Sponsors</a>
+                <a href="/views/contacts.html">Contacto</a>
             </div>
             <div class="footer-heading footer-3">
                 <h2>Social Media</h2>
@@ -177,12 +118,6 @@
             </div>
         </div>
     </div>
-    </div>
-
-    <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
 
 </body>
 
