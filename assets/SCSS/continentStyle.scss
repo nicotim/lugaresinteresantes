@@ -3,17 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.border {
-    border: 1px solid black;
-    display: flex;
-    margin-top: $standard-pixels * 2;
-    @extend %display;
+    @extend %font-style;
 }
 
 body {
-    background-color: #D0F9CC;
+    background-color: #f1faf0;
 }
 
 .jumbotron {
@@ -45,28 +39,32 @@ body {
 /* Header */
 
 .header {
-    flex-wrap: wrap;
-    @extend %display-content;
+    width: 100%;
+    padding: 0 20px;
 }
 
-.header>div {
-    margin-left: 2%;
-    border-radius: 1em;
-    padding: 1em;
-    position: relative;
+.header-container {
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    margin: 2% auto;
 }
 
 .header__text {
     font-size: $standard-em * 1.5;
     font-weight: bold;
     margin-top: 4%;
-    @extend %font-style;
+    margin-left: 5%;
+    margin-right: 5%;
     @extend %text;
 }
 
 .logo {
-    width: 20%;
-    height: 35vh;
+    max-width: 200px;
+    width: 100%;
+    height: 25vh;
+    margin-right: 2%;
     overflow: hidden;
 }
 
@@ -74,31 +72,28 @@ body {
 /*Style de las cajas de Continentes */
 
 .contenedor {
-    flex-wrap: wrap;
-    @extend %display-content;
-}
-
-.contenedor>div {
-    width: 80%;
-    height: 50vh;
-    margin: 2%;
-    background-image: linear-gradient(to left, hsl(0, 100%, 100%), #3EFAB5);
-    @extend %display;
-    @extend %border-radius;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .card {
-    height: auto;
-    padding: $standard-em;
-    position: relative;
-    @extend %border-radius;
-    @extend %display;
+    background-color: #84F075;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    margin: 2% auto;
+    box-shadow: 0 0 10px #84F075;
 }
 
 .card__img {
-    width: 20%;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 35vh;
     overflow: hidden;
+    padding: 10px;
+    box-shadow: 0 0 10px #84F075;
     @extend %display;
     @extend %border-radius;
     @extend %margin;
@@ -107,7 +102,6 @@ body {
 .card__text {
     text-align: center;
     font-size: $standard-em;
-    @extend %font-style;
     @extend %margin;
 }
 
@@ -120,19 +114,7 @@ body {
 .card__pharagraph {
     line-height: 5vh;
     margin-bottom: 5%;
-    font-size: $standard-em * 1.2;
     font-weight: normal;
-}
-
-.button {
-    display: inline-block;
-    position: relative;
-    @extend %button;
-}
-
-.button__text {
-    font-weight: 600;
-    font-size: $standard-em;
 }
 
 
@@ -141,11 +123,12 @@ body {
 .footer-container {
     background-color: lighten($negro, 20%);
     padding: 3em 0 3em 0;
+    margin: 30px 0 0 0;
 }
 
 .footer {
     width: 80%;
-    height: 35vh;
+    height: 30vh;
     background-color: lighten($negro, 20%);
     color: $blanco;
     display: flex;
@@ -162,7 +145,7 @@ body {
 
 .footer-heading h2 {
     margin-bottom: 2em;
-    color: $celeste;
+    color: #84F075;
 }
 
 .footer-heading a {
@@ -171,7 +154,7 @@ body {
     text-decoration: underline;
     margin-bottom: $standard-em * 0.5;
     &:hover {
-        color: $celeste;
+        color: #84F075;
         transition: 0.4;
     }
     @extend %font-style;
@@ -180,40 +163,109 @@ body {
 
 /* Media query */
 
-@media screen and (max-width: 575.98px) {
-    .contenedor>div {
+
+/* Media query */
+
+@media screen and (max-width: 449.99px) {
+    .header {
+        justify-content: center;
+    }
+    .header__text {
+        font-size: $standard-em;
+    }
+    .logo {
+        display: none;
+    }
+    .contenedor {
         flex-direction: column;
-        width: fit-content;
-        margin: $standard-em;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
         padding: initial;
     }
-    .navegacion {
-        flex-direction: column;
+    .card {
+        display: block;
     }
     .card__img {
-        max-width: $standard-width * 30;
+        max-width: 500px;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-    .footer-3 {
+    .footer {
         height: 50vh;
+    }
+    .footer-3 {
+        display: none;
+    }
+}
+
+@media (min-width:450px) and (max-width: 575.98px) {
+    .header {
+        justify-content: center;
+    }
+    .header-container {
+        padding: 10px;
+        margin-bottom: 5%;
+    }
+    .logo {
+        display: none;
+    }
+    .header__text {
+        font-size: $standard-em * 1.2;
+    }
+    .contenedor {
+        flex-direction: column;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: initial;
+    }
+    .card {
+        display: block;
+    }
+    .card__img {
+        max-width: 350px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer {
+        height: 25vh;
+        flex-direction: column;
+    }
+    .footer-3 {
         display: none;
     }
 }
 
 @media(min-width:575.99px) and (max-width: 949.98px) {
-    .contenedor>div {
-        flex-direction: column;
-        width: fit-content;
-        margin: 5%;
-        padding: 3em;
+    .header {
+        flex-direction: row;
+        display: flex;
     }
-    .navegacion {
+    .header-container {
+        padding: 10px;
+    }
+    .header__text {
+        font-size: $standard-em * 1.2;
+    }
+    .logo {
+        margin: auto;
+    }
+    .contenedor {
         flex-direction: column;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: initial;
+    }
+    .card {
+        display: block;
+        max-width: 800px;
     }
     .card__img {
-        min-width: $standard-pixels * 15;
+        max-width: 350px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -225,7 +277,7 @@ body {
 }
 
 @media screen and (min-width: 949.99px) {
-    .contenedor>div {
+    .contenedor {
         width: fit-content;
         margin-top: $standard-pixels;
     }

@@ -8,7 +8,7 @@ $standard-pixels: 10px;
 
 $blanco: white;
 $negro: black;
-$celeste: #2394FC;
+$celeste: #C4FAFF;
 
 /* Extenciones */
 
@@ -47,9 +47,9 @@ $celeste: #2394FC;
     background-color: $blanco;
     color: $negro;
     transition-duration: 0.4s;
-    border: 2px solid $celeste;
+    border: 2px solid #76D166;
     &:hover {
-        background-color: $celeste;
+        background-color: #76D166;
     }
 }
 
@@ -64,6 +64,6 @@ $width: 50%;
     border: 0;
     border-bottom: 2px solid $blanco;
     padding: 15px;
-    color: $negro;
+    color: #8C6142;
     width: 100%;
 }
