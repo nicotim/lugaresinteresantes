@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #E6E08C;
+    background-color: #BFBBBA;
 }
 
 .jumbotron {
@@ -48,17 +48,17 @@ body {
     display: flex;
     width: 100%;
     padding: 0 10px;
-    margin: 20px 20px 20px 20px;
+    margin: 1% 1% 1% 1%;
 }
 
 .contact-form {
     max-width: 550px;
     margin: 0 auto;
-    background-color: #AEF092;
+    background-color: #D9CC1E;
     padding: 30px;
     border-radius: 5px;
     display: flex;
-    box-shadow: 0 0 10px #AEF092;
+    box-shadow: 0 0 10px #BFB417;
 }
 
 .input-fields {
@@ -84,10 +84,53 @@ textarea {
 }
 
 .btn {
-    background: #AEF092;
+    background: #BFBBBA;
     text-align: center;
     padding: 16px;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 449.99px) {
+    .wrapper {
+        width: 94%;
+        margin: 3%;
+    }
+    .nav-container {
+        flex-direction: column;
+        width: 96%;
+        margin: 2%;
+    }
+    .button-text {
+        font-size: $standard-em * 0.8;
+    }
+    .contacts-header {
+        font-size: $standard-em * 0.8;
+    }
+}
+
+@media (min-width:450px) and (max-width: 575.98px) {
+    .wrapper {
+        width: 96%;
+        margin: 2% 2%;
+    }
+    .nav-container {
+        flex-direction: column;
+        width: 98%;
+        margin: 1% 1%;
+    }
+    .button-text {
+        font-size: $standard-em * 0.9;
+    }
+    .contacts-header {
+        font-size: $standard-em * 0.9;
+    }
+}
+
+@media(min-width:575.99px) and (max-width: 949.98px) {
+    .wrapper {
+        width: 98%;
+        margin: 1% 1%;
+    }
 }
